@@ -1,9 +1,10 @@
 import React from "react";
+import MemberCardPage from "./MemberCardPage";
 
 function MainContainer(){
     return (
         <div>
-            <MemberCardBox />
+            <MemberCardPage />
         </div>
     )
 }

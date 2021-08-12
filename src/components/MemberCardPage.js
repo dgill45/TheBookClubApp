@@ -1,7 +1,7 @@
 import React from "react";
 import MemberCard from "./components/MemberCard";
 
-function MemberCardBox(){
+function MemberCardPage(){
 
     return (
         <div>
@@ -9,3 +9,5 @@ function MemberCardBox(){
         </div>
     )
 }
+
+export default MemberCardPage;
