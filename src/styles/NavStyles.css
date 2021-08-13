@@ -1,0 +1,23 @@
+nav.navbar {
+    background: transparent;
+    border: 0;
+  }
+  @media (max-width: 767px) {
+    nav.navbar .navbar-collapse {
+      border: 0;
+      box-shadow: none;
+    }
+  }
+  header {
+    background-image: url('http://www.100resilientcities.org/page/-/100rc/img/cities/cities-la_optimized.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+  }
+  header.jumbotron h1 {
+    padding-top: 100px;
+  }
+  header.jumbotron h1,
+  header.jumbotron p {
+    color: white;
+  }
