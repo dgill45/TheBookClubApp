@@ -2,13 +2,13 @@ import React from "react";
 import Comment from "./Comment"
 
 
-function MemberCard(){
+function MemberCard({id, name, fav_author}){
 
     return (
         <div className = "card">
             <div className = "card-body">
-                <h3>Donell Gill</h3>
-                <p>favorite author: Sir Arthur Conan Doyle</p>
+                <h3>{name}</h3>
+                <p>{fav_author}</p>
                 <Comment />
             </div> 
         </div>

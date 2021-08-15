@@ -1,17 +1,12 @@
 import React from "react";
-import NavBar from "./NavBar"
-import BookCardPage from "./BookCardPage";
-import MemberCardPage from "./MemberCardPage";
-
 
 
 function Home(){
 
     return (
         <div>
-            <NavBar /> 
-            <BookCardPage />
-            <MemberCardPage />  
+            <img src ="https://unsplash.com/photos/hPKTYwJ4FUo" alt ="woman reading book"></img>
+            <p>photo by Seven Shooter @ unsplash.com</p>
         </div>
     )
 }

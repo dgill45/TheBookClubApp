@@ -1,11 +1,18 @@
 import React from "react";
 import MemberCard from "./MemberCard";
 
-function MemberCardPage(){
+function MemberCardPage({members, handleDelete}){
+
+    
+
+        const memberCards = members.map((member => {
+            return <MemberCard key = {member.id} members = {members} handleDelete={handleDelete}/>
+        })  
+    )
 
     return (
         <div>
-            <MemberCard />
+            {memberCards}
         </div>
     )
 }

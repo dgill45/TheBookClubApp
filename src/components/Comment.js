@@ -4,7 +4,7 @@ function Comment(){
 
     return(
         <div>
-            <p>This is my comment.</p>
+            <ul><ol>This is my comment.</ol></ul>
         </div>
     )
 }
