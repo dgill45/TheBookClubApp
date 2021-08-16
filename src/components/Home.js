@@ -5,7 +5,6 @@ function Home(){
 
     return (
         <div>
-            <img src ="https://unsplash.com/photos/hPKTYwJ4FUo" alt ="woman reading book"></img>
             <p>photo by Seven Shooter @ unsplash.com</p>
         </div>
     )

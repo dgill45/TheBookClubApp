@@ -12,6 +12,7 @@ function MemberCardPage({members, handleDelete}){
 
     return (
         <div>
+            <h2>Book Club Members</h2>
             {memberCards}
         </div>
     )
