@@ -1,22 +1,22 @@
 import React from "react";
-import Comment from "./Comment"
+import {Link} from "react-router-dom";
 
-function BookCard({books, handleDelete, onShowBook}){
+function BookCard({book, handleDelete}){
 
-
-
+    
     return (
-        <div onClick={handleShowBook}>
+        <div>
             <div className = "card">
                 <div className = "card-body">
-                    <h3>{books.title}</h3>
-                    <h4>{books.author}</h4>
-                    <p>{books.publisher}</p>
-                    <p>{books.genre}</p>
-                    <button onClick={onShowBook}>View this Book</button>
+                    <h3>{book.title}</h3>
+                    <h4>{book.author}</h4>
+                    <p>{book.publisher}</p>
+                    <p>{book.genre}</p>
+                    <Link to ={`/books/${book.id}`}> 
+                    <button className ="clicked">View this Book</button>
+                    </Link>
                     <button onClick = {handleDelete}>Delete This Book!</button>
                 </div>
-                <Comment />
             </div>
         </div>
     )

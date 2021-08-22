@@ -5,7 +5,8 @@ function Home(){
 
     return (
         <div>
-            <p>photo by Seven Shooter @ unsplash.com</p>
+            {/*<img src="https://unsplash.com/photos/CXYPfveiuis" alt ="book on table"></img>
+            <p>photo by Sincerely Media @ unsplash.com</p>*/}
         </div>
     )
 }

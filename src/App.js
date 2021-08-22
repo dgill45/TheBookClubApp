@@ -1,34 +1,16 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import './App.css';
+import "./styles/NavStyles.css"
 import Home from "./components/Home";
 import MemberCardPage from "./components/MemberCardPage";
 import BookCardPage from "./components/BookCardPage";
 import NavBar from "./components/NavBar"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import BookDetails from "./components/BookDetails";
 
 function App() {
 
-  const [books, setBookCards] = useState([])
-  const [members, setMemberCards] = useState([])
-  
-
-  
-    useEffect(() => {
-    fetch("http://localhost:9393/books")
-    .then((r) => r.json())
-    .then((setBookCards))
-
-  },[]);
-
-
-  useEffect(() => {
-    fetch("http://localhost:9393/members")
-    .then((r) => r.json())
-    .then((setMemberCards))
-
-  },[]);
-
-
+ 
   return (
     <Router>
       <div className="App">
@@ -37,18 +19,20 @@ function App() {
         <Route exact path= "/">
           <Home />
         </Route>
+        <Route path = '/books/:id'>
+          <BookDetails />
+        </Route>
         <Route path = "/books">
-          <BookCardPage books = {books} />
+          <BookCardPage />
         </Route>
         <Route path = "/members">
-          <MemberCardPage members = {members}/>
+          <MemberCardPage />
         </Route>
         <Route path = "*">
           <h1>404 Not Found</h1>
         </Route>
-      </Switch>
-      
-    </div>
+        </Switch>
+      </div>
     </Router>
   )
 }

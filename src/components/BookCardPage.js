@@ -1,23 +1,20 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import BookCard from "./BookCard";
+import BookCardForm from "./BookCardForm"
 
 
-function BookCardPage({books, newBook, onAddBook, onDeleteBook, onShowBook}){
+function BookCardPage(){
 
-    const [updatedBookList, setBooks] = useState([])
+    const [books, setBooks] = useState([])
+    const [showForm, setShowForm] = useState(false)
+  
     
-
-    function handleShowBook(id) {
-        fetch(`http://localhost:9393/books/${id}`, {
-          method: "GET",
-        })
-          .then((r) => r.json())
-          .then(() => {
-          books.filter((book) =>{
-             return book.id !==id      
-             })
-          });
-      }
+      useEffect(() => {
+      fetch("http://localhost:9393/books")
+      .then((r) => r.json())
+      .then(setBooks)
+  
+    },[]);   
     
       function handleEditBook(id){
         fetch(`http://localhost:9393/books/${id}`, {
@@ -36,7 +33,6 @@ function BookCardPage({books, newBook, onAddBook, onDeleteBook, onShowBook}){
           })
         }
     
-    
       function handleDeleteBook(id) {
         fetch(`http://localhost:3000/books/${id}`, {
           method: "DELETE",
@@ -50,34 +46,35 @@ function BookCardPage({books, newBook, onAddBook, onDeleteBook, onShowBook}){
           });
       }
 
-    const [showForm, setShowForm] = useState([])
+    
 
     function handleClick() {
-        setShowForm((showForm) => !showForm);
+        setShowForm((showForm) => !showForm)
       }
     
 
-     const bookCards = books.map((books => {
-         return <BookCard key = {books.id} 
-                    books = {books} 
-                    updatedBookList = {updatedBookList}
-                    onDeleteBook={handleDelete}
-                    onAddBook = {handleAddBook} 
-                    onDeleteBook = {handleDeleteBook}
-                    onShowBook ={handleShowBook} />
+     const bookCards = books.map((book => {
+         return <BookCard key = {book.id} 
+                    book = {book}
+                    handleDeleteBook={handleDeleteBook}
+                    handleEditBook = {handleEditBook} />
      }) 
 
-     )
+     )/*
+     useEffect(() => {
+      fetch("http://localhost:9393/members")
+      .then((r) => r.json())
+      .then((setMemberCards))
+  
+    },[])*/
     
     return (
         <div className ="card-box">
             <h2>Books</h2>
-            {bookCards}
+            {books && bookCards}
             {showForm ? <BookCardForm 
-                            newBook = {newBook}
                          bookCards = {bookCards}
-                          onAddBook={onAddBook}
-                           /> : null}
+                          /> : null}
             <div className="buttonContainer">
                 <button onClick={handleClick}>Add a new Book</button>
             </div>

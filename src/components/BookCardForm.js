@@ -1,8 +1,7 @@
 import React, {useState} from "react";
-import { useState } from "react";
 
 
-function BookCardForm({books, newBook }){
+function BookCardForm({books}){
 
     const [newBook, setNewBook] = useState({
         title:"",
@@ -50,20 +49,20 @@ function BookCardForm({books, newBook }){
                     name = "author" 
                     onChange = {handleChange} 
                     value ={newBook.author} 
-                    placeholder="Enter your character's Class"/>
+                    placeholder="Book Author"/>
                 <input type ="text" 
                     name = "publisher" 
                     onChange = {handleChange} 
                     value = {newBook.publisher} 
-                    placeholder ="image url"></input>
+                    placeholder ="publisher"></input>
                 <input type ="text" 
                     name = "genre" 
                     onChange = {handleChange } 
                     value = {newBook.genre} 
-                    placeholder = "description"></input>
+                    placeholder = "genre"></input>
                 <input type ="submit" 
                     name ="submit" 
-                    value="Add a new book" 
+                    value="Submit New Book" 
                     className="submit" />
             </form>
         </div>

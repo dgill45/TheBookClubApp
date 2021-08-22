@@ -8,8 +8,14 @@ nav.navbar {
       box-shadow: none;
     }
   }
+
+  .nav-link{
+    justify-content: center;
+    padding: 5px;
+    
+  }
+
   header {
-    background-image: url('http://www.100resilientcities.org/page/-/100rc/img/cities/cities-la_optimized.jpg');
     background-size: cover;
     background-position: center;
     height: 400px;

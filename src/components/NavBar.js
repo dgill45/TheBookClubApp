@@ -8,9 +8,15 @@ function NavBar(){
             <h1 className="display-4">Welcome to Book Club!</h1>
             <p className="lead">For people who love books and talking about books.</p>
             <header className="jumbotron">
-            <NavLink exact to ="/">Home</NavLink>
-            <NavLink to ="/members">Members</NavLink>
-            <NavLink to ="/books">Books</NavLink>
+                <div className = "nav-link">
+                    <NavLink exact to ="/">Home</NavLink>
+                </div>
+                <div className = 'nav-link'>
+                    <NavLink to ="/members">Members</NavLink>
+                 </div>
+                 <div className = 'nav-link'>
+                    <NavLink to ="/books">Books</NavLink>
+                </div>
             </header>
         </nav>
 
