@@ -25,6 +25,9 @@ function App() {
         <Route path = "/books">
           <BookCardPage />
         </Route>
+        <Route path = '/members/:id'>
+          <BookDetails />
+        </Route>
         <Route path = "/members">
           <MemberCardPage />
         </Route>

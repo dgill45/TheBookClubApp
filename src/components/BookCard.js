@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
-function BookCard({book, handleDelete}){
+function BookCard({book, handleDeleteBook}){
 
     
     return (
@@ -15,7 +15,7 @@ function BookCard({book, handleDelete}){
                     <Link to ={`/books/${book.id}`}> 
                     <button className ="clicked">View this Book</button>
                     </Link>
-                    <button onClick = {handleDelete}>Delete This Book!</button>
+                    <button onClick = {handleDeleteBook}>Delete This Book!</button>
                 </div>
             </div>
         </div>

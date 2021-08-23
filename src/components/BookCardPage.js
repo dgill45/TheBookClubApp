@@ -60,14 +60,8 @@ function BookCardPage(){
                     handleEditBook = {handleEditBook} />
      }) 
 
-     )/*
-     useEffect(() => {
-      fetch("http://localhost:9393/members")
-      .then((r) => r.json())
-      .then((setMemberCards))
-  
-    },[])*/
-    
+     )
+     
     return (
         <div className ="card-box">
             <h2>Books</h2>
