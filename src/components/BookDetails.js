@@ -27,7 +27,7 @@ function BookDetails(){
                     <p>{book.publisher}</p>
                     <p>{book.genre}</p>
                 </div>
-                <Comment />
+                <Comment book={book}/>
             </div>}
         </div>
     )

@@ -25,7 +25,7 @@ function MemberDetails(){
                         <p>by</p>
                     <h4>{member.fav_author}</h4>
                 </div>
-                <Comment />
+                <Comment member_id ={member_id}/>
             </div>}
         </div>
     )

@@ -1,10 +1,16 @@
 import React from "react";
 
+
+
 function Comment(){
+
+
+
+
 
     return(
         <div>
-            <ul><ol>This is my comment.</ol></ul>
+            <ul>This is my comment.</ul>
         </div>
     )
 }
